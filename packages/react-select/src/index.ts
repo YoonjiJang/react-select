@@ -1,12 +1,12 @@
 import Select from './Select';
-import type { GroupBase } from './types';
+import type { GroupBase } from 'react-select-shared/types';
 import useStateManager from './useStateManager';
 
 export { default } from './stateManager';
 export { default as NonceProvider } from './NonceProvider';
 export { mergeStyles } from './styles';
 export { defaultTheme } from './theme';
-export { createFilter } from './filters';
+export { createFilter } from 'react-select-shared/filters';
 export { components } from './components';
 export type SelectInstance<
   Option = unknown,
@@ -42,6 +42,35 @@ export type { PlaceholderProps } from './components/Placeholder';
 export type { SingleValueProps } from './components/SingleValue';
 export type { ThemeConfig } from './theme';
 export type { ClassNamesConfig, StylesConfig } from './styles';
+export type {
+  GroupBase,
+  OptionsOrGroups,
+  Options,
+  SingleValue,
+  MultiValue,
+  PropsValue,
+  OnChangeValue,
+  ClassNamesState,
+  CX,
+  ActionMetaBase,
+  SelectOptionActionMeta,
+  DeselectOptionActionMeta,
+  RemoveValueActionMeta,
+  PopValueActionMeta,
+  ClearActionMeta,
+  CreateOptionActionMeta,
+  InitialInputFocusedActionMeta,
+  ActionMeta,
+  SetValueAction,
+  InputAction,
+  InputActionMeta,
+  MenuPlacement,
+  CoercedMenuPlacement,
+  MenuPosition,
+  FocusDirection,
+  GetOptionLabel,
+  GetOptionValue,
+} from 'react-select-shared/types';
 export * from './types';
 export type {
   OptionContext,
@@ -55,5 +84,8 @@ export type {
   AriaOnChange,
   AriaOnFilter,
   AriaOnFocus,
-} from './accessibility';
-export type { FormatOptionLabelContext, FormatOptionLabelMeta } from './Select';
+} from 'react-select-shared/accessibility';
+export type {
+  FormatOptionLabelContext,
+  FormatOptionLabelMeta,
+} from 'react-select-shared/select';

@@ -1,11 +1,12 @@
 /** @jsx jsx */
-import { ReactNode } from 'react';
 import { jsx } from '@emotion/react';
 import {
-  CommonPropsAndClassName,
-  CSSObjectWithLabel,
-  GroupBase,
-} from '../types';
+  ContainerProps as BaseContainerProps,
+  IndicatorsContainerProps as BaseIndicatorsContainerProps,
+  ValueContainerProps as BaseValueContainerProps,
+} from 'react-select-shared/components';
+import { GroupBase } from 'react-select-shared/types';
+import { CommonPropsAndClassName, CSSObjectWithLabel } from '../types';
 import { getStyleProps } from '../utils';
 
 // ==============================
@@ -16,15 +17,11 @@ export interface ContainerProps<
   Option = unknown,
   IsMulti extends boolean = boolean,
   Group extends GroupBase<Option> = GroupBase<Option>
-> extends CommonPropsAndClassName<Option, IsMulti, Group> {
-  /** Whether the select is disabled. */
-  isDisabled: boolean;
-  isFocused: boolean;
-  /** The children to be rendered. */
-  children: ReactNode;
-  /** Inner props to be passed down to the container. */
-  innerProps: JSX.IntrinsicElements['div'];
-}
+> extends Omit<
+      BaseContainerProps<Option, IsMulti, Group>,
+      'getClassNames' | 'selectProps'
+    >,
+    CommonPropsAndClassName<Option, IsMulti, Group> {}
 export const containerCSS = <
   Option,
   IsMulti extends boolean,
@@ -67,13 +64,11 @@ export interface ValueContainerProps<
   Option = unknown,
   IsMulti extends boolean = boolean,
   Group extends GroupBase<Option> = GroupBase<Option>
-> extends CommonPropsAndClassName<Option, IsMulti, Group> {
-  /** Props to be passed to the value container element. */
-  innerProps?: JSX.IntrinsicElements['div'];
-  /** The children to be rendered. */
-  children: ReactNode;
-  isDisabled: boolean;
-}
+> extends Omit<
+      BaseValueContainerProps<Option, IsMulti, Group>,
+      'getClassNames' | 'selectProps'
+    >,
+    CommonPropsAndClassName<Option, IsMulti, Group> {}
 export const valueContainerCSS = <
   Option,
   IsMulti extends boolean,
@@ -131,13 +126,11 @@ export interface IndicatorsContainerProps<
   Option = unknown,
   IsMulti extends boolean = boolean,
   Group extends GroupBase<Option> = GroupBase<Option>
-> extends CommonPropsAndClassName<Option, IsMulti, Group> {
-  isDisabled: boolean;
-  /** The children to be rendered. */
-  children: ReactNode;
-  /** Props to be passed to the indicators container element. */
-  innerProps?: {};
-}
+> extends Omit<
+      BaseIndicatorsContainerProps<Option, IsMulti, Group>,
+      'getClassNames' | 'selectProps'
+    >,
+    CommonPropsAndClassName<Option, IsMulti, Group> {}
 
 export const indicatorsContainerCSS = (): CSSObjectWithLabel => ({
   alignItems: 'center',

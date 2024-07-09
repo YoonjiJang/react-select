@@ -1,0 +1,4 @@
+{
+  "main": "dist/react-select-shared-styles.cjs.js",
+  "module": "dist/react-select-shared-styles.esm.js"
+}

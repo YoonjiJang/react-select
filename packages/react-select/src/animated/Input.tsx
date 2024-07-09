@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ReactElement } from 'react';
 import { TransitionProps } from 'react-transition-group/Transition';
 import { InputProps } from '../components/Input';
-import { GroupBase } from '../types';
+import { GroupBase } from 'react-select-shared/types';
 
 export type InputComponent = <
   Option,

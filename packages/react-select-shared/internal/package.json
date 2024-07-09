@@ -1,0 +1,5 @@
+{
+  "main": "dist/react-select-shared-internal.cjs.js",
+  "module": "dist/react-select-shared-internal.esm.js",
+  "types": "dist/react-select-shared-internal.cjs.d.ts"
+}

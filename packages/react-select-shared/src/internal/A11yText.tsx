@@ -1,11 +1,9 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import * as React from 'react';
 
 // Assistive text to describe visual elements. Hidden for sighted users.
 const A11yText = (props: JSX.IntrinsicElements['span']) => (
   <span
-    css={{
-      label: 'a11yText',
+    style={{
       zIndex: 9999,
       border: 0,
       clip: 'rect(1px, 1px, 1px, 1px)',

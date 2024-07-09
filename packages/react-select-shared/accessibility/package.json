@@ -1,0 +1,5 @@
+{
+  "main": "dist/react-select-shared-accessibility.cjs.js",
+  "module": "dist/react-select-shared-accessibility.esm.js",
+  "types": "dist/react-select-shared-accessibility.cjs.d.ts"
+}

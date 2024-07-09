@@ -7,18 +7,6 @@ exports[`defaults - snapshot 1`] = `
 }
 
 .emotion-1 {
-  z-index: 9999;
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  width: 1px;
-  position: absolute;
-  overflow: hidden;
-  padding: 0;
-  white-space: nowrap;
-}
-
-.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -48,11 +36,11 @@ exports[`defaults - snapshot 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:hover {
+.emotion-1:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-4 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -72,7 +60,7 @@ exports[`defaults - snapshot 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-5 {
+.emotion-3 {
   grid-area: 1/1/2/3;
   color: hsl(0, 0%, 50%);
   margin-left: 2px;
@@ -80,7 +68,7 @@ exports[`defaults - snapshot 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-6 {
+.emotion-4 {
   visibility: visible;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -95,7 +83,7 @@ exports[`defaults - snapshot 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-6:after {
+.emotion-4:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -108,7 +96,7 @@ exports[`defaults - snapshot 1`] = `
   padding: 0;
 }
 
-.emotion-7 {
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -126,7 +114,7 @@ exports[`defaults - snapshot 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 {
+.emotion-6 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -137,7 +125,7 @@ exports[`defaults - snapshot 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-9 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -149,11 +137,11 @@ exports[`defaults - snapshot 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-9:hover {
+.emotion-7:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-10 {
+.emotion-8 {
   display: inline-block;
   fill: currentColor;
   line-height: 1;
@@ -166,30 +154,30 @@ exports[`defaults - snapshot 1`] = `
     class=" emotion-0"
   >
     <span
-      class="emotion-1"
       id="react-select-2-live-region"
+      style="z-index: 9999; border: 0px; clip: rect(1px, 1px, 1px, 1px); height: 1px; width: 1px; position: absolute; overflow: hidden; padding: 0px; white-space: nowrap;"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="emotion-1"
       role="log"
+      style="z-index: 9999; border: 0px; clip: rect(1px, 1px, 1px, 1px); height: 1px; width: 1px; position: absolute; overflow: hidden; padding: 0px; white-space: nowrap;"
     />
     <div
-      class=" emotion-3"
+      class=" emotion-1"
     >
       <div
-        class=" emotion-4"
+        class=" emotion-2"
       >
         <div
-          class=" emotion-5"
+          class=" emotion-3"
           id="react-select-2-placeholder"
         >
           Select...
         </div>
         <div
-          class=" emotion-6"
+          class=" emotion-4"
           data-value=""
         >
           <input
@@ -213,18 +201,18 @@ exports[`defaults - snapshot 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-7"
+        class=" emotion-5"
       >
         <span
-          class=" emotion-8"
+          class=" emotion-6"
         />
         <div
           aria-hidden="true"
-          class=" emotion-9"
+          class=" emotion-7"
         >
           <svg
             aria-hidden="true"
-            class="emotion-10"
+            class="emotion-8"
             focusable="false"
             height="20"
             viewBox="0 0 20 20"

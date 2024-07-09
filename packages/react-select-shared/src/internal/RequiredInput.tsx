@@ -1,10 +1,8 @@
-/** @jsx jsx */
-import { FocusEventHandler, FunctionComponent } from 'react';
-import { jsx } from '@emotion/react';
+import * as React from 'react';
 
-const RequiredInput: FunctionComponent<{
+const RequiredInput: React.FunctionComponent<{
   readonly name?: string;
-  readonly onFocus: FocusEventHandler<HTMLInputElement>;
+  readonly onFocus: React.FocusEventHandler<HTMLInputElement>;
 }> = ({ name, onFocus }) => (
   <input
     required
@@ -12,8 +10,7 @@ const RequiredInput: FunctionComponent<{
     tabIndex={-1}
     aria-hidden="true"
     onFocus={onFocus}
-    css={{
-      label: 'requiredInput',
+    style={{
       opacity: 0,
       pointerEvents: 'none',
       position: 'absolute',

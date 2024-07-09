@@ -1,0 +1,5 @@
+{
+  "main": "dist/react-select-shared-utils.cjs.js",
+  "module": "dist/react-select-shared-utils.esm.js",
+  "types": "dist/react-select-shared-utils.cjs.d.ts"
+}

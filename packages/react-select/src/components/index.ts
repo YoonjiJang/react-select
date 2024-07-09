@@ -46,7 +46,7 @@ import MultiValue, {
 import Option, { OptionProps } from './Option';
 import Placeholder, { PlaceholderProps } from './Placeholder';
 import SingleValue, { SingleValueProps } from './SingleValue';
-import { GroupBase } from '../types';
+import { GroupBase } from 'react-select-shared/types';
 
 export interface SelectComponents<
   Option,

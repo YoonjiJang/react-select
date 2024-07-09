@@ -1,25 +1,19 @@
 /** @jsx jsx */
-import { ReactNode } from 'react';
 import { jsx } from '@emotion/react';
-import {
-  CommonPropsAndClassName,
-  CSSObjectWithLabel,
-  GroupBase,
-} from '../types';
+import { PlaceholderProps as BasePlaceholderProps } from 'react-select-shared/components';
+import { GroupBase } from 'react-select-shared/types';
+import { CommonPropsAndClassName, CSSObjectWithLabel } from '../types';
 import { getStyleProps } from '../utils';
 
 export interface PlaceholderProps<
   Option = unknown,
   IsMulti extends boolean = boolean,
   Group extends GroupBase<Option> = GroupBase<Option>
-> extends CommonPropsAndClassName<Option, IsMulti, Group> {
-  /** The children to be rendered. */
-  children: ReactNode;
-  /** props passed to the wrapping element for the group. */
-  innerProps: JSX.IntrinsicElements['div'];
-  isDisabled: boolean;
-  isFocused: boolean;
-}
+> extends Omit<
+      BasePlaceholderProps<Option, IsMulti, Group>,
+      'getClassNames' | 'selectProps'
+    >,
+    CommonPropsAndClassName<Option, IsMulti, Group> {}
 
 export const placeholderCSS = <
   Option,

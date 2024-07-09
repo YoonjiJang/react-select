@@ -3,7 +3,7 @@ import { Component, FunctionComponent, MouseEvent, RefCallback } from 'react';
 import { jsx } from '@emotion/react';
 import { Route, RouteComponentProps, Switch } from 'react-router-dom';
 
-import { animatedScrollTo } from 'react-select/src/utils';
+import { animatedScrollTo } from 'react-select-shared/utils';
 import routes from './routes';
 import ScrollSpy from './ScrollSpy';
 import Sticky from './Sticky';

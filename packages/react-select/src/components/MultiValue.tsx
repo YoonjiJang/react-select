@@ -1,12 +1,14 @@
 /** @jsx jsx */
-import { ComponentType, ReactNode } from 'react';
 import { jsx } from '@emotion/react';
+import { ComponentType } from 'react';
 import { CrossIcon } from './indicators';
 import {
-  CommonPropsAndClassName,
-  CSSObjectWithLabel,
-  GroupBase,
-} from '../types';
+  MultiValueGenericProps as BaseMultiValueGenericProps,
+  MultiValueProps as BaseMultiValueProps,
+  MultiValueRemoveProps as BaseMultiValueRemoveProps,
+} from 'react-select-shared/components';
+import { GroupBase } from 'react-select-shared/types';
+import { CommonPropsAndClassName, CSSObjectWithLabel } from '../types';
 import { Props } from '../Select';
 import { getStyleProps } from '../utils';
 
@@ -24,16 +26,12 @@ export interface MultiValueProps<
   Option = unknown,
   IsMulti extends boolean = boolean,
   Group extends GroupBase<Option> = GroupBase<Option>
-> extends CommonPropsAndClassName<Option, IsMulti, Group> {
-  children: ReactNode;
+> extends Omit<
+      BaseMultiValueProps<Option, IsMulti, Group>,
+      'components' | 'getClassNames' | 'selectProps'
+    >,
+    CommonPropsAndClassName<Option, IsMulti, Group> {
   components: MultiValueComponents<Option, IsMulti, Group>;
-  cropWithEllipsis?: boolean;
-  data: Option;
-  innerProps: JSX.IntrinsicElements['div'];
-  isFocused: boolean;
-  isDisabled: boolean;
-  removeProps: JSX.IntrinsicElements['div'];
-  index: number;
 }
 
 export const multiValueCSS = <
@@ -115,10 +113,10 @@ export interface MultiValueGenericProps<
   Option = unknown,
   IsMulti extends boolean = boolean,
   Group extends GroupBase<Option> = GroupBase<Option>
-> {
-  children: ReactNode;
-  data: any;
-  innerProps: { className?: string };
+> extends Omit<
+    BaseMultiValueGenericProps<Option, IsMulti, Group>,
+    'selectProps'
+  > {
   selectProps: Props<Option, IsMulti, Group>;
 }
 export const MultiValueGeneric = <
@@ -138,10 +136,10 @@ export interface MultiValueRemoveProps<
   Option = unknown,
   IsMulti extends boolean = boolean,
   Group extends GroupBase<Option> = GroupBase<Option>
-> {
-  children?: ReactNode;
-  data: Option;
-  innerProps: JSX.IntrinsicElements['div'];
+> extends Omit<
+    BaseMultiValueRemoveProps<Option, IsMulti, Group>,
+    'selectProps'
+  > {
   selectProps: Props<Option, IsMulti, Group>;
 }
 export function MultiValueRemove<

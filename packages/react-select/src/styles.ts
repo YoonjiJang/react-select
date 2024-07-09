@@ -47,7 +47,8 @@ import {
   MultiValueProps,
   multiValueRemoveCSS,
 } from './components/MultiValue';
-import { CSSObjectWithLabel, GroupBase } from './types';
+import { GroupBase } from 'react-select-shared/types';
+import { CSSObjectWithLabel } from './types';
 
 export interface StylesProps<
   Option,

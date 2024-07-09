@@ -1,11 +1,11 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { Fragment, ReactElement, RefCallback, MouseEvent } from 'react';
+import * as React from 'react';
 import useScrollCapture from './useScrollCapture';
 import useScrollLock from './useScrollLock';
 
 interface Props {
-  readonly children: (ref: RefCallback<HTMLElement>) => ReactElement;
+  readonly children: (
+    ref: React.RefCallback<HTMLElement>
+  ) => React.ReactElement;
   readonly lockEnabled: boolean;
   readonly captureEnabled: boolean;
   readonly onBottomArrive?: (event: WheelEvent | TouchEvent) => void;
@@ -14,7 +14,7 @@ interface Props {
   readonly onTopLeave?: (event: WheelEvent | TouchEvent) => void;
 }
 
-const blurSelectInput = (event: MouseEvent<HTMLDivElement>) => {
+const blurSelectInput = (event: React.MouseEvent<HTMLDivElement>) => {
   const element = event.target as HTMLDivElement;
   return (
     element.ownerDocument.activeElement &&
@@ -40,20 +40,20 @@ export default function ScrollManager({
   });
   const setScrollLockTarget = useScrollLock({ isEnabled: lockEnabled });
 
-  const targetRef: RefCallback<HTMLElement> = (element) => {
+  const targetRef: React.RefCallback<HTMLElement> = (element) => {
     setScrollCaptureTarget(element);
     setScrollLockTarget(element);
   };
 
   return (
-    <Fragment>
+    <React.Fragment>
       {lockEnabled && (
         <div
           onClick={blurSelectInput}
-          css={{ position: 'fixed', left: 0, bottom: 0, right: 0, top: 0 }}
+          style={{ position: 'fixed', left: 0, bottom: 0, right: 0, top: 0 }}
         />
       )}
       {children(targetRef)}
-    </Fragment>
+    </React.Fragment>
   );
 }

@@ -16,12 +16,12 @@ import {
   OptionBooleanValue,
 } from './constants';
 import Select, { FormatOptionLabelMeta } from '../Select';
-import { FilterOptionOption } from '../filters';
+import { FilterOptionOption } from 'react-select-shared/filters';
 
 import { matchers } from '@emotion/jest';
-import { AriaLiveMessages } from '../accessibility';
-import { noop } from '../utils';
-import { GroupBase } from '../types';
+import { AriaLiveMessages } from 'react-select-shared/accessibility';
+import { noop } from 'react-select-shared/utils';
+import { GroupBase } from 'react-select-shared/types';
 
 expect.extend(matchers);
 

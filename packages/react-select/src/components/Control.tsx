@@ -1,31 +1,20 @@
 /** @jsx jsx */
-import { ReactNode, Ref } from 'react';
 import { jsx } from '@emotion/react';
 
-import {
-  CommonPropsAndClassName,
-  CSSObjectWithLabel,
-  GroupBase,
-} from '../types';
+import { ControlProps as BaseControlProps } from 'react-select-shared/components';
+import { GroupBase } from 'react-select-shared/types';
+import { CommonPropsAndClassName, CSSObjectWithLabel } from '../types';
 import { getStyleProps } from '../utils';
 
 export interface ControlProps<
   Option = unknown,
   IsMulti extends boolean = boolean,
   Group extends GroupBase<Option> = GroupBase<Option>
-> extends CommonPropsAndClassName<Option, IsMulti, Group> {
-  /** Children to render. */
-  children: ReactNode;
-  innerRef: Ref<HTMLDivElement>;
-  /** The mouse down event and the innerRef to pass down to the controller element. */
-  innerProps: JSX.IntrinsicElements['div'];
-  /** Whether the select is disabled. */
-  isDisabled: boolean;
-  /** Whether the select is focused. */
-  isFocused: boolean;
-  /** Whether the select is expanded. */
-  menuIsOpen: boolean;
-}
+> extends Omit<
+      BaseControlProps<Option, IsMulti, Group>,
+      'getClassNames' | 'selectProps'
+    >,
+    CommonPropsAndClassName<Option, IsMulti, Group> {}
 
 export const css = <
   Option,

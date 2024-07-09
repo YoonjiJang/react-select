@@ -8,12 +8,12 @@ import {
   OnChangeValue,
   Options,
   OptionsOrGroups,
-} from './types';
-import { cleanValue, valueTernary } from './utils';
+} from 'react-select-shared/types';
+import { cleanValue, valueTernary } from 'react-select-shared/utils';
 import {
   getOptionValue as baseGetOptionValue,
   getOptionLabel as baseGetOptionLabel,
-} from './builtins';
+} from 'react-select-shared/builtins';
 
 export interface Accessors<Option> {
   getOptionValue: GetOptionValue<Option>;

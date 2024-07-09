@@ -4,7 +4,7 @@ import {
   InputActionMeta,
   OnChangeValue,
   PropsValue,
-} from './types';
+} from 'react-select-shared/types';
 import { PublicBaseSelectProps } from './Select';
 import { useCallback, useState } from 'react';
 

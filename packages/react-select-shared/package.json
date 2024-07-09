@@ -1,0 +1,99 @@
+{
+  "name": "react-select-shared",
+  "version": "5.8.0",
+  "main": "dist/react-select-shared.cjs.js",
+  "module": "dist/react-select-shared.esm.js",
+  "types": "dist/react-select-shared.cjs.d.ts",
+  "sideEffects": false,
+  "author": "Jed Watson",
+  "license": "MIT",
+  "repository": "https://github.com/JedWatson/react-select/tree/master/packages/react-select-shared",
+  "dependencies": {
+    "memoize-one": "^6.0.0"
+  },
+  "devDependencies": {
+    "react": "^16.13.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "files": [
+    "dist",
+    "accessibility",
+    "builtins",
+    "components",
+    "filters",
+    "internal",
+    "select",
+    "styles",
+    "types",
+    "utils"
+  ],
+  "preconstruct": {
+    "entrypoints": [
+      "index.ts",
+      "accessibility/index.ts",
+      "builtins/index.ts",
+      "components/index.ts",
+      "filters/index.ts",
+      "internal/index.ts",
+      "select/index.ts",
+      "styles/index.ts",
+      "types/index.ts",
+      "utils/index.ts"
+    ]
+  },
+  "exports": {
+    ".": {
+      "module": "./dist/react-select-shared.esm.js",
+      "import": "./dist/react-select-shared.cjs.mjs",
+      "default": "./dist/react-select-shared.cjs.js"
+    },
+    "./types": {
+      "module": "./types/dist/react-select-shared-types.esm.js",
+      "import": "./types/dist/react-select-shared-types.cjs.mjs",
+      "default": "./types/dist/react-select-shared-types.cjs.js"
+    },
+    "./utils": {
+      "module": "./utils/dist/react-select-shared-utils.esm.js",
+      "import": "./utils/dist/react-select-shared-utils.cjs.mjs",
+      "default": "./utils/dist/react-select-shared-utils.cjs.js"
+    },
+    "./select": {
+      "module": "./select/dist/react-select-shared-select.esm.js",
+      "import": "./select/dist/react-select-shared-select.cjs.mjs",
+      "default": "./select/dist/react-select-shared-select.cjs.js"
+    },
+    "./styles": {
+      "module": "./styles/dist/react-select-shared-styles.esm.js",
+      "import": "./styles/dist/react-select-shared-styles.cjs.mjs",
+      "default": "./styles/dist/react-select-shared-styles.cjs.js"
+    },
+    "./filters": {
+      "module": "./filters/dist/react-select-shared-filters.esm.js",
+      "import": "./filters/dist/react-select-shared-filters.cjs.mjs",
+      "default": "./filters/dist/react-select-shared-filters.cjs.js"
+    },
+    "./builtins": {
+      "module": "./builtins/dist/react-select-shared-builtins.esm.js",
+      "import": "./builtins/dist/react-select-shared-builtins.cjs.mjs",
+      "default": "./builtins/dist/react-select-shared-builtins.cjs.js"
+    },
+    "./internal": {
+      "module": "./internal/dist/react-select-shared-internal.esm.js",
+      "import": "./internal/dist/react-select-shared-internal.cjs.mjs",
+      "default": "./internal/dist/react-select-shared-internal.cjs.js"
+    },
+    "./components": {
+      "module": "./components/dist/react-select-shared-components.esm.js",
+      "import": "./components/dist/react-select-shared-components.cjs.mjs",
+      "default": "./components/dist/react-select-shared-components.cjs.js"
+    },
+    "./accessibility": {
+      "module": "./accessibility/dist/react-select-shared-accessibility.esm.js",
+      "import": "./accessibility/dist/react-select-shared-accessibility.cjs.mjs",
+      "default": "./accessibility/dist/react-select-shared-accessibility.cjs.js"
+    },
+    "./package.json": "./package.json"
+  }
+}

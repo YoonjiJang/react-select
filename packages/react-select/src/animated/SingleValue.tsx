@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ReactElement } from 'react';
 import { SingleValueProps } from '../components/SingleValue';
 import { Fade } from './transitions';
-import { GroupBase } from '../types';
+import { GroupBase } from 'react-select-shared/types';
 
 export type SingleValueComponent = <
   Option,

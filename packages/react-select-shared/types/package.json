@@ -1,0 +1,5 @@
+{
+  "main": "dist/react-select-shared-types.cjs.js",
+  "module": "dist/react-select-shared-types.esm.js",
+  "types": "dist/react-select-shared-types.cjs.d.ts"
+}

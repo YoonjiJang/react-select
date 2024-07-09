@@ -1,13 +1,11 @@
-/** @jsx jsx */
-import { Ref } from 'react';
-import { jsx } from '@emotion/react';
+import * as React from 'react';
 import { removeProps } from '../utils';
 
 export default function DummyInput({
   innerRef,
   ...props
 }: JSX.IntrinsicElements['input'] & {
-  readonly innerRef: Ref<HTMLInputElement>;
+  readonly innerRef: React.Ref<HTMLInputElement>;
 }) {
   // Remove animation props not meant for HTML elements
   const filteredProps = removeProps(
@@ -23,8 +21,7 @@ export default function DummyInput({
     <input
       ref={innerRef}
       {...filteredProps}
-      css={{
-        label: 'dummyInput',
+      style={{
         // get rid of any default styles
         background: 0,
         border: 0,

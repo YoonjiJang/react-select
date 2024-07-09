@@ -6,7 +6,7 @@ import {
   RefAttributes,
 } from 'react';
 
-import { GroupBase } from './types';
+import { GroupBase } from 'react-select-shared/types';
 import Select from './Select';
 import useStateManager from './useStateManager';
 import type { StateManagerProps } from './useStateManager';

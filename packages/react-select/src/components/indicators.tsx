@@ -1,12 +1,16 @@
 /** @jsx jsx */
-import { ReactNode } from 'react';
 import { jsx, keyframes } from '@emotion/react';
 
 import {
-  CommonPropsAndClassName,
-  CSSObjectWithLabel,
-  GroupBase,
-} from '../types';
+  ClearIndicatorProps as BaseClearIndicatorProps,
+  CrossIconProps,
+  DownChevronProps,
+  DropdownIndicatorProps as BaseDropdownIndicatorProps,
+  IndicatorSeparatorProps as BaseIndicatorSeparatorProps,
+  LoadingIndicatorProps as BaseLoadingIndicatorProps,
+} from 'react-select-shared/components';
+import { GroupBase } from 'react-select-shared/types';
+import { CommonPropsAndClassName, CSSObjectWithLabel } from '../types';
 import { getStyleProps } from '../utils';
 
 // ==============================
@@ -34,13 +38,12 @@ const Svg = ({
   />
 );
 
-export type CrossIconProps = JSX.IntrinsicElements['svg'] & { size?: number };
+export type { CrossIconProps, DownChevronProps };
 export const CrossIcon = (props: CrossIconProps) => (
   <Svg size={20} {...props}>
     <path d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z" />
   </Svg>
 );
-export type DownChevronProps = JSX.IntrinsicElements['svg'] & { size?: number };
 export const DownChevron = (props: DownChevronProps) => (
   <Svg size={20} {...props}>
     <path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z" />
@@ -55,15 +58,11 @@ export interface DropdownIndicatorProps<
   Option = unknown,
   IsMulti extends boolean = boolean,
   Group extends GroupBase<Option> = GroupBase<Option>
-> extends CommonPropsAndClassName<Option, IsMulti, Group> {
-  /** The children to be rendered inside the indicator. */
-  children?: ReactNode;
-  /** Props that will be passed on to the children. */
-  innerProps: JSX.IntrinsicElements['div'];
-  /** The focused state of the select. */
-  isFocused: boolean;
-  isDisabled: boolean;
-}
+> extends Omit<
+      BaseDropdownIndicatorProps<Option, IsMulti, Group>,
+      'getClassNames' | 'selectProps'
+    >,
+    CommonPropsAndClassName<Option, IsMulti, Group> {}
 
 const baseCSS = <
   Option,
@@ -121,14 +120,11 @@ export interface ClearIndicatorProps<
   Option = unknown,
   IsMulti extends boolean = boolean,
   Group extends GroupBase<Option> = GroupBase<Option>
-> extends CommonPropsAndClassName<Option, IsMulti, Group> {
-  /** The children to be rendered inside the indicator. */
-  children?: ReactNode;
-  /** Props that will be passed on to the children. */
-  innerProps: JSX.IntrinsicElements['div'];
-  /** The focused state of the select. */
-  isFocused: boolean;
-}
+> extends Omit<
+      BaseClearIndicatorProps<Option, IsMulti, Group>,
+      'getClassNames' | 'selectProps'
+    >,
+    CommonPropsAndClassName<Option, IsMulti, Group> {}
 
 export const clearIndicatorCSS = baseCSS;
 export const ClearIndicator = <
@@ -160,11 +156,11 @@ export interface IndicatorSeparatorProps<
   Option = unknown,
   IsMulti extends boolean = boolean,
   Group extends GroupBase<Option> = GroupBase<Option>
-> extends CommonPropsAndClassName<Option, IsMulti, Group> {
-  isDisabled: boolean;
-  isFocused: boolean;
-  innerProps?: JSX.IntrinsicElements['span'];
-}
+> extends Omit<
+      BaseIndicatorSeparatorProps<Option, IsMulti, Group>,
+      'getClassNames' | 'selectProps'
+    >,
+    CommonPropsAndClassName<Option, IsMulti, Group> {}
 
 export const indicatorSeparatorCSS = <
   Option,
@@ -274,15 +270,11 @@ export interface LoadingIndicatorProps<
   Option = unknown,
   IsMulti extends boolean = boolean,
   Group extends GroupBase<Option> = GroupBase<Option>
-> extends CommonPropsAndClassName<Option, IsMulti, Group> {
-  /** Props that will be passed on to the children. */
-  innerProps: JSX.IntrinsicElements['div'];
-  /** The focused state of the select. */
-  isFocused: boolean;
-  isDisabled: boolean;
-  /** Set size of the container. */
-  size: number;
-}
+> extends Omit<
+      BaseLoadingIndicatorProps<Option, IsMulti, Group>,
+      'getClassNames' | 'selectProps'
+    >,
+    CommonPropsAndClassName<Option, IsMulti, Group> {}
 export const LoadingIndicator = <
   Option,
   IsMulti extends boolean,

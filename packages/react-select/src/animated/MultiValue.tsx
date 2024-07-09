@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import { TransitionProps } from 'react-transition-group/Transition';
 import { MultiValueProps } from '../components/MultiValue';
 import { Collapse } from './transitions';
-import { GroupBase } from '../types';
+import { GroupBase } from 'react-select-shared/types';
 
 export type MultiValueComponent = <
   Option,

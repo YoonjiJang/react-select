@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ReactElement } from 'react';
 import { PlaceholderProps } from '../components/Placeholder';
 import { Fade, collapseDuration } from './transitions';
-import { GroupBase } from '../types';
+import { GroupBase } from 'react-select-shared/types';
 
 export type PlaceholderComponent = <
   Option,

@@ -1,7 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { handleInputChange } from './utils';
+import { handleInputChange } from 'react-select-shared/utils';
 import { StateManagerProps } from './useStateManager';
-import { GroupBase, InputActionMeta, OptionsOrGroups } from './types';
+import {
+  GroupBase,
+  InputActionMeta,
+  OptionsOrGroups,
+} from 'react-select-shared/types';
 
 type AsyncManagedPropKeys =
   | 'options'
