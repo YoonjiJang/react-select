@@ -1,0 +1,95 @@
+{
+  "name": "@react-select/unstyled",
+  "version": "5.8.0",
+  "description": "A Select control built with and for ReactJS",
+  "main": "dist/react-select-unstyled.cjs.js",
+  "module": "dist/react-select-unstyled.esm.js",
+  "types": "dist/react-select-unstyled.cjs.d.ts",
+  "sideEffects": false,
+  "author": "Jed Watson",
+  "license": "MIT",
+  "repository": "https://github.com/JedWatson/react-select/tree/master/packages/react-select-unstyled",
+  "dependencies": {
+    "@babel/runtime": "^7.12.0",
+    "@floating-ui/dom": "^1.0.1",
+    "@types/react-transition-group": "^4.4.0",
+    "memoize-one": "^6.0.0",
+    "prop-types": "^15.6.0",
+    "react-select-shared": "5.8.0",
+    "react-transition-group": "^4.3.0",
+    "use-isomorphic-layout-effect": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/jest-in-case": "^1.0.6",
+    "enzyme": "^3.8.0",
+    "enzyme-to-json": "^3.3.0",
+    "jest-in-case": "^1.0.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "files": [
+    "dist",
+    "base",
+    "animated",
+    "async",
+    "creatable",
+    "async-creatable"
+  ],
+  "keywords": [
+    "combobox",
+    "form",
+    "input",
+    "multiselect",
+    "react",
+    "react-component",
+    "select",
+    "ui"
+  ],
+  "preconstruct": {
+    "entrypoints": [
+      "index.ts",
+      "base/index.ts",
+      "animated/index.ts",
+      "async/index.ts",
+      "creatable/index.ts",
+      "async-creatable/index.ts"
+    ]
+  },
+  "exports": {
+    ".": {
+      "module": "./dist/react-select-unstyled.esm.js",
+      "import": "./dist/react-select-unstyled.cjs.mjs",
+      "default": "./dist/react-select-unstyled.cjs.js"
+    },
+    "./base": {
+      "module": "./base/dist/react-select-unstyled-base.esm.js",
+      "import": "./base/dist/react-select-unstyled-base.cjs.mjs",
+      "default": "./base/dist/react-select-unstyled-base.cjs.js"
+    },
+    "./async": {
+      "module": "./async/dist/react-select-unstyled-async.esm.js",
+      "import": "./async/dist/react-select-unstyled-async.cjs.mjs",
+      "default": "./async/dist/react-select-unstyled-async.cjs.js"
+    },
+    "./animated": {
+      "module": "./animated/dist/react-select-unstyled-animated.esm.js",
+      "import": "./animated/dist/react-select-unstyled-animated.cjs.mjs",
+      "default": "./animated/dist/react-select-unstyled-animated.cjs.js"
+    },
+    "./creatable": {
+      "module": "./creatable/dist/react-select-unstyled-creatable.esm.js",
+      "import": "./creatable/dist/react-select-unstyled-creatable.cjs.mjs",
+      "default": "./creatable/dist/react-select-unstyled-creatable.cjs.js"
+    },
+    "./async-creatable": {
+      "module": "./async-creatable/dist/react-select-unstyled-async-creatable.esm.js",
+      "import": "./async-creatable/dist/react-select-unstyled-async-creatable.cjs.mjs",
+      "default": "./async-creatable/dist/react-select-unstyled-async-creatable.cjs.js"
+    },
+    "./package.json": "./package.json"
+  }
+}

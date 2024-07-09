@@ -1,0 +1,5 @@
+{
+  "main": "dist/react-select-unstyled-async.cjs.js",
+  "module": "dist/react-select-unstyled-async.esm.js",
+  "types": "dist/react-select-unstyled-async.cjs.d.ts"
+}
